@@ -4,6 +4,7 @@ set(PATCH_VERSION "1" CACHE INTERNAL "Patch version")
 set(PROJECT_VESRION 0.0.${PATCH_VERSION})    
 
 #for VS CODE LOCAL  in my PC
+#set (BOOST_ROOT "G:/boost_1_83_0/boost_1_83_0/") # Путь к библиотеке Boost
 #set (Boost_NO_SYSTEM_PATHS ON)
 #set (Boost_USE_STATIC_LIBS ON)
 #set (Boost_USE_STATIC_RUNTIME OFF)
@@ -11,9 +12,9 @@ set(PROJECT_VESRION 0.0.${PATCH_VERSION})
 
 
 
-project(bayan VERSION ${PROJECT_VESRION})
+project(bulk_server VERSION ${PROJECT_VESRION})
 
-#find_package(Boost COMPONENTS system REQUIRED)
+find_package(Boost 1.74 REQUIRED)
 
 add_executable(bulk_server main.cpp)
 
